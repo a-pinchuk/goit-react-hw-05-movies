@@ -1,15 +1,15 @@
-import { TextField } from '@mui/material';
+// import { TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import { Button } from '@mui/material';
-import { fetchSearchFilm } from 'components/services/fetchApi';
+import { Button, TextField } from '@mui/material';
+import { fetchSearchFilm } from 'services/fetchApi';
 import {
   FilmTitle,
   GalleryList,
   MovieImage,
   MovieInfo,
   PhotoCard,
-} from './Home/Home.styled';
+} from '../Home/Home.styled';
 
 const Movies = () => {
   const [event, setEvent] = useState([]);
@@ -42,6 +42,7 @@ const Movies = () => {
           label="Search Film"
           variant="outlined"
         />
+
         <Button type="submit" variant="outlined" size="medium" sx={{ ml: 2 }}>
           Search
         </Button>

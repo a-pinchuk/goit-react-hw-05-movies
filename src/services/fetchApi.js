@@ -47,6 +47,8 @@ export async function fetchSearchFilm(query) {
     params: {
       api_key: KEY,
       query: query,
+      language: 'en-US',
+      page: 1,
     },
   });
 

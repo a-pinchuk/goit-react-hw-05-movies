@@ -5,12 +5,6 @@ export const GalleryList = styled.ul`
   flex-wrap: wrap;
   gap: 16px;
   list-style: none;
-  /* @include media-min(tablet) {
-  gap: 32px;
-}
-@include media-min(desktop) {
-  gap: 16px;
-} */
 `;
 
 export const PhotoCard = styled.li`
@@ -21,18 +15,7 @@ export const PhotoCard = styled.li`
   transition: filter 300ms ease-in-out;
   &:hover,
   &:focus {
-    .movie__rating {
-      filter: drop-shadow(2px -2px 2px getColor(primary-text-color));
-    }
-    .film__title {
-      // filter: drop-shadow(1px -1px 1px rgb(90, 88, 88));
-      transform: scale(1.01);
-    }
-    .movie__image {
-      filter: drop-shadow(1px 1px 15px getColor(secondary-text-color));
-    }
-    // filter: drop-shadow(0px -1px 30px getColor(secondary-text-color));
-    // filter: drop-shadow(1px 1px 10px getColor(secondary-text-color));
+    filter: drop-shadow(1px 1px 15px black);
   }
   width: calc((100% - 32px) / 3);
 `;

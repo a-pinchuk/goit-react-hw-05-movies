@@ -1,4 +1,4 @@
-import { fetchTrendingFilms } from 'components/services/fetchApi';
+import { fetchTrendingFilms } from 'services/fetchApi';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {

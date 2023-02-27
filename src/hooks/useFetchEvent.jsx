@@ -1,4 +1,4 @@
-import { fetchFilmById } from 'components/services/fetchApi';
+import { fetchFilmById } from 'services/fetchApi';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 

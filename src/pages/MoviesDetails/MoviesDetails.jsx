@@ -34,10 +34,10 @@ const MoviesDetails = () => {
             </div>
           </FilmDiv>
           <p>Additional information</p>
-          <StyledLink to="cast" state={{ from: location }}>
+          <StyledLink to="cast" state={location.state}>
             Cast
           </StyledLink>
-          <StyledLink to="reviews" state={{ from: location }}>
+          <StyledLink to="reviews" state={location.state}>
             Reviews
           </StyledLink>
           <Outlet />

@@ -1,4 +1,4 @@
-import { fetchFilmCredits } from 'components/services/fetchApi';
+import { fetchFilmCredits } from 'services/fetchApi';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CharacterImg, CharacterItem, CharacterList } from './Cast.styled';
@@ -19,7 +19,6 @@ const Cast = () => {
       {event.length !== 0 ? (
         <CharacterList>
           {event.map(el => {
-            console.log(el.id);
             return (
               <CharacterItem key={el.id}>
                 <CharacterImg
