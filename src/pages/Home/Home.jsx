@@ -1,6 +1,6 @@
 import { fetchTrendingFilms } from 'components/services/fetchApi';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   FilmTitle,
   GalleryList,
@@ -13,6 +13,7 @@ import {
 const Home = () => {
   const [trendFilm, setTrendFilm] = useState([]);
   const baseURL = 'https://image.tmdb.org/t/p/w500/';
+  const location = useNavigate();
   useEffect(() => {
     fetchTrendingFilms().then(data => {
       setTrendFilm(data);
@@ -26,7 +27,7 @@ const Home = () => {
         {trendFilm.map(el => {
           return (
             <PhotoCard key={el.id}>
-              <Link to={`/movies/${el.id}`}>
+              <Link to={`/movies/${el.id}`} state={{ from: location }}>
                 <MovieImage
                   src={baseURL + el.poster_path}
                   alt=""
